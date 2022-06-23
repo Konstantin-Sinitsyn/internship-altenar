@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"
+        defer>
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"
+        defer>
+    </script>
+    <script src="js/index.js" defer></script>
+    <title>Создание поста</title>
+</head>
+
+<body>
+    <div class="create-post">
+        <div class="creating-post__scroll-box scroll-box">
+            <nav class="scroll-box__breadcrumb">
+                <div class="scroll-box__container">
+                    <a href="index.html" class="scroll-box__breadcrumb-item"><i
+                            class="bi bi-arrow-left-short"></i>Вернуться к
+                        списку</a>
+                </div>
+            </nav>
+            <header class="scroll-box__header">
+                <div class="scroll-box__container">
+                    <h2 class="title">Создайте подборку</h2>
+                    <p class="scroll-box__header-subtitle">Перед началом ознакомьтесь с <a href="#"
+                            class="scroll-box__header-link">гайдлайнами</a> , где вы найдете примеры
+                        правильного оформления</p>
+                </div>
+            </header>
+            <main class="scroll-box__main">
+                <div class="scroll-box__container">
+                    <form action="" class="form">
+                        <fieldset class="form__item">
+                            <legend class="form__title">Расскажите о подборке</legend>
+                            <p class="form__subtitle">Желательно сделать это кратко и ёмко</p>
+                            <div class="form__input input-group">
+                                <input type="text" class="form-control input-group__input" type="text" minlength="5"
+                                    maxlength="30" placeholder="Дискриптор">
+                                <span class="input-group__counter">30</span>
+                                <span class="input-group__error">Дискриптор не может быть короче 5 символов</span>
+                            </div>
+                            <div class="form__input input-group">
+                                <input type="text" class="form-control input-group__input" type="text" minlength="5"
+                                    maxlength="50" placeholder="Название">
+                                <span class="input-group__counter">50</span>
+                                <span class="input-group__error">Название не может быть короче 5 символов</span>
+                            </div>
+                            <div class="form__input input-group">
+                                <textarea class="form-control input-group__textarea input-group__input"
+                                    placeholder="Описание"></textarea>
+                            </div>
+                        </fieldset>
+                        <hr class="divider">
+                        <fieldset class="form__item">
+                            <legend class="form__title">Загрузите обложку</legend>
+                            <div class="drop-zone">
+                                <span class="drop-zone__close visually-hidden">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#c4c4c4"
+                                        viewBox="0 0 18 18">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                                    </svg>
+                                </span>
+                                <div class="drop-zone__image">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" fill="#757575"
+                                        class="bi bi-file-earmark" viewBox="0 0 16 16">
+                                        <path
+                                            d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
+                                    </svg>
+                                </div>
+                                <div class="drop-zone__description">
+                                    <div class="drop-zone__title">Перетащите файл или <label class="drop-zone__label"
+                                            for="file-input">загрузите с компьютера</label></div>
+                                    <div class="drop-zone__information">Соотношение 1:1. Минимальный размер 1242х1242 px
+                                    </div>
+                                </div>
+                                <input type="file" id="file-input" class="visually-hidden">
+                            </div>
+                        </fieldset>
+                        <hr class="divider">
+                        <fieldset class="form__item">
+                            <legend class="form__title">Выберите цвет</legend>
+                            <p class="form__subtitle">Лучше всего подойдет цвет преобладающий на обложке</p>
+                            <div class="color-picker">
+                                <label class="color-picker__label" for="color-picker"></label>
+                                <input class="color-picker__input visually-hidden" id="color-picker" type="color">
+                            </div>
+                        </fieldset>
+                        <hr class="divider">
+                        <fieldset class="form__item">
+                            <legend class="form__title">Проверьте читабельность</legend>
+                            <p class="form__subtitle">Выберите цвет интерфейса, который будет контрастнее смотреться на
+                                выбранном ранее фоне</p>
+                            <div class="chexbox">
+                                <span>Темный</span>
+                                <input class="chexbox__input visually-hidden" id="checkbox" type="checkbox" value="1">
+                                <label class="chexbox__label" for="checkbox"></label>
+                                <span>Светлый</span>
+                            </div>
+                        </fieldset>
+                        <hr class="divider">
+                        <fieldset class="form__item">
+                            <legend class="form__title">Оставьте ссылку</legend>
+                            <p class="form__subtitle">Лучше всего ссылаться на каталог вашего магазина или
+                                промо-страницу</p>
+                            <div class="form__input input-group">
+                                <input type="text" id="descriptor" class="form-control input-group__input" type="text"
+                                    minlength="5" maxlength="30" placeholder="Название">
+                                <span class="input-group__counter">30</span>
+                                <span class="input-group__error">Название не может быть короче 5 символов</span>
+                            </div>
+                            <div class="form__input input-group">
+                                <input type="text" id="descriptor"
+                                    class="form-control input-group__input input-group__input--link" type="url"
+                                    placeholder="Ссылка">
+                                <div class="form__icon">
+                                    <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
+                                        <path
+                                            d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span class="input-group__counter">50</span>
+                            </div>
+                        </fieldset>
+                        <input class="button form__button" type="submit" value="Создать">
+                        <p class="form__description description">Подборка не будет опубликована. Вы сможете добавить
+                            продукты и внести правки</p>
+                    </form>
+                </div>
+            </main>
+        </div>
+        <div class="creating-post__preview">
+            <div class="creating-post__preview-header"></div>
+            <div class="preview">
+                <div class="telephone">
+                    <div class="telephone__status-bar status-bar">
+                        <div class="status-bar__item">
+                            <span class="status-bar__time">22:47</span>
+                        </div>
+                        <div class="status-bar__item">
+                            <i class="bi bi-wifi-2"></i>
+                            <i class="bi bi-battery-full"></i>
+                        </div>
+                    </div>
+                    <img class="telephone__image telephone__image--default" src="img/cover-image.jpg"
+                        alt="Обложка поста">
+                    <div class="telephone__post">
+                        <h6 class="telephone__post-title">Название</h6>
+                        <p class="telephone__post-description">Описание</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
